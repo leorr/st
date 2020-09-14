@@ -5,8 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "JetBrains Mono:size=12:antialias=true:autohint=true";
-static char *font2[] = { "JoyPixels:pixelsize=10:antialias=true:autohint=true" };
+static char *font = "JetBrains Mono:size=11:antialias=true:autohint=true";
 static int borderpx = 0;
 
 /*
@@ -108,7 +107,7 @@ char *termname = "st-256color";
 unsigned int tabspaces = 4;
 
 /* bg opacity */
-float alpha = 0.96;
+float alpha = 1;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
@@ -130,10 +129,10 @@ static const char *colorname[] = {
 	"#ebdbb2",
 	[255] = 0,
 	/* more colors can be added after 255 to use with DefaultXX */
-	"#F7E086", /* 256 -> cursor */
+	"#F2F2F4", /* 256 -> cursor */
 	"#555555", /* 257 -> rev cursor*/
-	"#190819", /* 258 -> bg */
-	"#ffeebe", /* 259 -> fg */
+	"#22272C", /* 258 -> bg */
+	"#F2F2F4", /* 259 -> fg */
 };
 
 
@@ -180,7 +179,6 @@ static unsigned int defaultattr = 11;
  */
 ResourcePref resources[] = {
 		{ "font",         STRING,  &font },
-		{ "fontalt0",     STRING,  &font2[0] },
 		{ "color0",       STRING,  &colorname[0] },
 		{ "color1",       STRING,  &colorname[1] },
 		{ "color2",       STRING,  &colorname[2] },
